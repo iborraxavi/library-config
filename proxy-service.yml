@@ -15,3 +15,6 @@ zuul:
     book:
       path: /book/**
       serviceId: book-service
+    order:
+      path: /order/**
+      serviceId: order-service
