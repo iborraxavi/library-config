@@ -12,6 +12,6 @@ logging:
               
 zuul:
   routes:
-    department:
+    book:
       path: /book/**
       serviceId: book-service
