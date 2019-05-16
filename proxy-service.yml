@@ -9,3 +9,15 @@ eureka:
 logging:
   pattern: 
     console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+    
+zuul:
+  routes:
+    book:
+      path: /book/**
+      serviceId: book-service
+    order:
+      path: /order/**
+      serviceId: order-service
+    purchase:
+      path: /purchase/**
+      serviceId: purchase-service
