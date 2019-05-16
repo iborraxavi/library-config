@@ -29,3 +29,9 @@ spring:
         - Path=/order/**
         filters:
         - RewritePath=/order/(?<path>.*), /$\{path}
+      - id: purchase-service
+        uri: lb://purchase-service
+        predicates:
+        - Path=/purchase/**
+        filters:
+        - RewritePath=/purchase/(?<path>.*), /$\{path}
