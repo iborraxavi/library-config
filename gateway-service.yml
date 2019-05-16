@@ -35,15 +35,3 @@ spring:
         - Path=/purchase/**
         filters:
         - RewritePath=/purchase/(?<path>.*), /$\{path}
-                
-zuul:
-  routes:
-    book:
-      path: /book/**
-      serviceId: book-service
-    order:
-      path: /order/**
-      serviceId: order-service
-    purchase:
-      path: /purchase/**
-      serviceId: purchase-service
