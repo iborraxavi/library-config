@@ -9,3 +9,15 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      
+zuul:
+  routes:
+    book:
+      path: /book/**
+      serviceId: book-service
+    order:
+      path: /order/**
+      serviceId: order-service
+    purchase:
+      path: /purchase/**
+      serviceId: purchase-service
