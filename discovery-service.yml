@@ -6,14 +6,11 @@ eureka:
     hostname: localhost
   client:
     registerWithEureka: false
-    fetchRegistry: false
+    fetchRegistry: true
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-  server:
-    wait-time-in-ms-when-sync-empty: 0
 
 zuul:
-  prefix: /api
   routes:
     book:
       path: /book/**
