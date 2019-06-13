@@ -17,21 +17,9 @@ spring:
         locator:
           enabled: true
       routes:
-      - id: book-service
-        uri: lb://book-service
+      - id: user-service
+        uri: lb://user-service
         predicates:
-        - Path=/book/**
+        - Path=/user/**
         filters:
-        - RewritePath=/book/(?<path>.*), /$\{path}
-      - id: order-service
-        uri: lb://order-service
-        predicates:
-        - Path=/order/**
-        filters:
-        - RewritePath=/order/(?<path>.*), /$\{path}
-      - id: purchase-service
-        uri: lb://purchase-service
-        predicates:
-        - Path=/purchase/**
-        filters:
-        - RewritePath=/purchase/(?<path>.*), /$\{path}
+        - RewritePath=/user/(?<path>.*), /$\{path}
