@@ -1,10 +1,7 @@
-server:
-  port: 8070
-
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8061/eureka/
+      defaultZone: https://secure-woodland-22734.herokuapp.com/eureka/
 
 logging:
   pattern: 
