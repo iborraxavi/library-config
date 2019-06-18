@@ -15,5 +15,5 @@ security:
       client:
          client-id: userclient
          client-secret: usersecret
-         authorized-grant-types: user_credentials
+         authorized-grant-types: client_credentials
          scope: all
